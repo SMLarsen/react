@@ -1,27 +1,29 @@
 {
-  "name": "babel-with-gulp",
+  "name": "react",
   "version": "1.0.0",
-  "description": "Starter code for using Babel with Gulp",
+  "description": "Starter React code for using Babel with Gulp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp watch"
   },
-  "author": "Carlos Souza <carloshrsouza@gmail.com> (http://csouza.me/)",
+  "author": "Carlos Souza <carloshrsouza@gmail.com> (http://csouza.me/) modified by Steve Larsen",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/codeschool/babel-with-gulp.git"
+    "url": "git+ssh://git@github.com/smlarsen/react.git"
   },
   "keywords": [
+    "react",
+    "react-router",
     "babel",
     "gulp",
     "es2015"
   ],
   "bugs": {
-    "url": "https://github.com/codeschool/babel-with-gulp/issues"
+    "url": "https://github.com/smlarsen/react/issues"
   },
-  "homepage": "https://github.com/codeschool/babel-with-gulp#readme",
+  "homepage": "https://github.com/smlarsen/react#readme",
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-preset-es2015": "^6.1.18",
@@ -40,7 +42,7 @@
     "jquery": "^2.2.2",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "react-router": "^2.0.1",
+    "react-router": "^2.8.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
