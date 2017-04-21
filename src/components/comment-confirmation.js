@@ -2,50 +2,60 @@ import React from 'react';
 // import jQuery from 'jquery';
 
 export default class CommentConfirmation extends React.Component {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.state = {
-      showConfirm: false
-    };
-  }
+        this.state = {
+            showConfirm: false
+        };
 
-  render() {
-
-    let confirmNode;
-
-    if (this.state.showConfirm) {
-      return (
-        <span>
-          <a href="" onClick={this._confirmDelete.bind(this)}>Yes </a> - or - <a href="" onClick={this._toggleConfirmMessage.bind(this)}> No</a>
-        </span>
-      );
-    } else {
-      confirmNode = <a href="" onClick={this._toggleConfirmMessage.bind(this)}>{this.props.children}</a>;
+        this._confirmDelete = this._confirmDelete.bind(this);
+        this._toggleConfirmMessage = this._toggleConfirmMessage.bind(this);
     }
 
-    return (
-      <span>
-        {confirmNode}
-      </span>
-    );
-  }
+    render() {
 
-  _toggleConfirmMessage(e) {
-    e.preventDefault();
+        let confirmNode;
 
-    this.setState({
-      showConfirm: !this.state.showConfirm
-    });
+        if (this.state.showConfirm) {
+            return ( <
+                span >
+                <
+                a href = ""
+                onClick = {
+                    this._confirmDelete
+                } > Yes < /a> - or - <a href="" onClick={this._toggleConfirmMessage}> No</a >
+                <
+                /span>
+            );
+        } else {
+            confirmNode = < a href = ""
+            onClick = {
+                this._toggleConfirmMessage
+            } > {
+                this.props.children
+            } < /a>;
+        }
 
-  }
+        return ( <
+            span > {
+                confirmNode
+            } <
+            /span>
+        );
+    }
 
-  _confirmDelete(e) {
-    e.preventDefault();
-    this.props.onConfirm();
-  }
-}
+    _toggleConfirmMessage(e) {
+        e.preventDefault();
 
-CommentConfirmation.propTypes {
-  onConfirm: React.PropTypes.func.isRequired
+        this.setState({
+            showConfirm: !this.state.showConfirm
+        });
+
+    }
+
+    _confirmDelete(e) {
+        e.preventDefault();
+        this.props.onConfirm();
+    }
 }
